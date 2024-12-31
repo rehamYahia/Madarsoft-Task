@@ -1,73 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment"
-    android:orientation="vertical"
-    android:background="@color/light_grey">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User Application "
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:textSize="@dimen/_18sdp"
-        android:textStyle="bold"
+    <data>
 
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="please fill this data "
-        android:layout_gravity="center"
-        android:textSize="@dimen/_12sdp"
-        android:textColor="@color/red"
-        android:layout_marginTop="@dimen/_3sdp"
-        />
+    </data>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User Name "
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_gravity="start"
-        android:layout_marginStart="@dimen/_18sdp"
-        android:textSize="@dimen/_10sdp"
-        />
-
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
-        android:layoutDirection="ltr"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/white"
-        android:backgroundTint="@color/white"
-        >
-        <!-- Optional: Adds a clear button to the EditText -->
+        android:layout_height="match_parent"
+        tools:context=".ui.HomeFragment"
+        android:orientation="vertical"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/l_email"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Application "
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please fill this data "
+            android:layout_gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/red"
+            android:layout_marginTop="@dimen/_3sdp"
+
+            />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_marginStart="@dimen/_16sdp"
             android:layout_marginEnd="@dimen/_16sdp"
-            android:textDirection="ltr"
-            android:hint="enter your user name"
-            android:paddingLeft="@dimen/_3sdp"
-            android:paddingRight="@dimen/_16sdp"
-            android:textColorHint="@color/green"
-            android:inputType="textEmailAddress"
-            android:backgroundTint="@color/white"
-            android:textSize="@dimen/_10sdp" />
+            android:background="@color/light_grey"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <!--    -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name "
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layoutDirection="ltr"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/white"
 
 
+                >
+                <!-- Optional: Adds a clear button to the EditText -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:textDirection="ltr"
+                    android:background="@drawable/edit_text_shape"
+                    android:hint="enter your user name"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_16sdp"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/_10sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age  "
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
 
-</LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layoutDirection="ltr"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/white"
+
+
+                >
+                <!-- Optional: Adds a clear button to the EditText -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:textDirection="ltr"
+                    android:background="@drawable/edit_text_shape"
+                    android:hint="enter your age"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_16sdp"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/_10sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Job Title "
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layoutDirection="ltr"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/white"
+
+
+                >
+                <!-- Optional: Adds a clear button to the EditText -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/job_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:textDirection="ltr"
+                    android:background="@drawable/edit_text_shape"
+                    android:hint="enter your job title "
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_16sdp"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/_10sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Gender "
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/education_grade"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/personal_shape"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColorHint="@color/spinner_selected"
+                android:paddingRight="@dimen/_5sdp"
+                android:inputType="text"
+                android:textDirection="ltr"
+                android:textSize="@dimen/_11sdp"
+                android:hint=" اختر"
+                android:layout_marginBottom="@dimen/_10sdp" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:text="Applay"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/grey"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_navigate_to_data_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to data screen"
+            android:backgroundTint="@color/grey"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp" />
+    </LinearLayout>
+</layout>

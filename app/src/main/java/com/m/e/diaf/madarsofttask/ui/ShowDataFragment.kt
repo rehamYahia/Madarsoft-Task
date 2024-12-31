@@ -5,22 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.m.e.diaf.madarsofttask.R
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import com.m.e.diaf.madarsofttask.databinding.FragmentShowDataBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShowDataFragment : Fragment() {
-
-
+    private  var _binding: FragmentShowDataBinding?=null
+    private val binding get()= _binding!!
+    private lateinit var navControler: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        navControler = findNavController()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_show_data, container, false)
+        _binding = FragmentShowDataBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 

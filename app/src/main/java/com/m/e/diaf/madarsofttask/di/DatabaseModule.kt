@@ -1,7 +1,9 @@
 package com.m.e.diaf.madarsofttask.di
 
 import android.app.Application
-import com.m.e.diaf.madarsofttask.database.DemoDatabase
+import androidx.room.Room
+import com.m.e.diaf.madarsofttask.database.DataUserDao
+import com.m.e.diaf.madarsofttask.database.DataUserDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,8 +16,8 @@ object DatabaseModule {
     @Provides
     @Singleton
     @Synchronized
-    fun provideDbInstance(application: Application) :DemoDatabase{
-        return Room.databaseBuilder(application , DemoDatabase::class.java , "mealDb")
+    fun provideDbInstance(application: Application) :DataUserDatabase{
+        return Room.databaseBuilder(application , DataUserDatabase::class.java , "userDB")
             .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
@@ -23,7 +25,7 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideDao(demoDatabase: DemoDatabase):MealsDao{
+    fun provideDao(demoDatabase: DataUserDatabase):DataUserDao{
         return demoDatabase.getDao()
     }
 }
