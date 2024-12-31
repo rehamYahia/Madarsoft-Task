@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment"
+    android:orientation="vertical"
+    android:background="@color/light_grey">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Application "
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="please fill this data "
+        android:layout_gravity="center"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/red"
+        android:layout_marginTop="@dimen/_3sdp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name "
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:textSize="@dimen/_10sdp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layoutDirection="ltr"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/white"
+        android:backgroundTint="@color/white"
+        >
+        <!-- Optional: Adds a clear button to the EditText -->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/l_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textDirection="ltr"
+            android:hint="enter your user name"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:textColorHint="@color/green"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+</LinearLayout>
