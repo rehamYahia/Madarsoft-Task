@@ -8,15 +8,16 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.m.e.diaf.madarsofttask.ui.HomeFragment"
+        android:name="com.m.e.diaf.madarsofttask.ui.fragment.HomeFragment"
         android:label="HomeFragment" >
+
         <action
             android:id="@+id/action_homeFragment_to_showDataFragment"
             app:destination="@id/showDataFragment" />
     </fragment>
     <fragment
         android:id="@+id/showDataFragment"
-        android:name="com.m.e.diaf.madarsofttask.ui.ShowDataFragment"
+        android:name="com.m.e.diaf.madarsofttask.ui.fragment.ShowDataFragment"
         android:label="fragment_show_data"
         tools:layout="@layout/fragment_show_data" />
 </navigation>

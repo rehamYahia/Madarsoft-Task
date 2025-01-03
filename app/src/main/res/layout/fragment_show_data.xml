@@ -9,23 +9,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ShowDataFragment"
+        tools:context=".ui.fragment.ShowDataFragment"
         android:orientation="vertical"
+        android:background="@color/light_grey"
+        android:layout_marginBottom="@dimen/_50sdp"
 
         >
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Applicants Data"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dataRecycle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/dataRecycle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
     </LinearLayout>
 </layout>

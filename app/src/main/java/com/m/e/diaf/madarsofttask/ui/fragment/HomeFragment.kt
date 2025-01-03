@@ -1,8 +1,7 @@
-package com.m.e.diaf.madarsofttask.ui
+package com.m.e.diaf.madarsofttask.ui.fragment
 
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +17,6 @@ import com.m.e.diaf.madarsofttask.databinding.FragmentHomeBinding
 import com.m.e.diaf.madarsofttask.model.DataUser
 import com.m.e.diaf.madarsofttask.viewmodel.DataUserViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 
@@ -54,11 +52,8 @@ class HomeFragment : Fragment() {
 
     }
     fun insertApplicantDataToLocal(){
-        Log.d("stttep1", "1")
         lifecycleScope.launch {
-            Log.d("stttep2", "2")
             if(validateFields()){
-                Log.d("stttep3", "3")
                 dataUserViewModel.insertApplicant(DataUser(
                     0,
                     binding.userName.text.toString() ,
@@ -66,32 +61,21 @@ class HomeFragment : Fragment() {
                     binding.jobTitle.text.toString(),
                     binding.gender.selectedItem.toString()
                 ))
-                Log.d("stttep4", "4")
                 Toast.makeText(requireContext(),"you applied successful",Toast.LENGTH_LONG).show()
-                Log.d("stttep5", "5")
                 binding.userName.text = Editable.Factory.getInstance().newEditable("")
-                Log.d("stttep6", "6")
                 binding.age.text = Editable.Factory.getInstance().newEditable("")
-                Log.d("stttep7", "7")
                 binding.jobTitle.text = Editable.Factory.getInstance().newEditable("")
-                Log.d("stttep8", "8")
                 binding.gender.setSelection(0)
-                Log.d("stttep9" , "sucess")
-
             }
-            Log.d("stttep10" , "10")
             dataUserViewModel.getAllApplicant()
             dataUserViewModel.allApplicant.collect{
-                Log.d("stttepsss" , it.toString())
             }
         }
-        Log.d("stttep11" , "11")
     }
 
 
     fun navigateToDataShow(){
-        val action = HomeFragmentDirections.actionHomeFragmentToShowDataFragment()
-        navControler.navigate(action)
+        navControler.navigate(R.id.showDataFragment)
     }
     private fun getSexType(){
         var sexTypeArray = arrayOf("choose","Male" , "Female")

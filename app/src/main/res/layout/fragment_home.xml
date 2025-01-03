@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.HomeFragment"
+        tools:context=".ui.fragment.HomeFragment"
         android:orientation="vertical"
         android:gravity="center"
         >
@@ -52,10 +52,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:layoutDirection="ltr"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/white"
-
-
                 >
                 <!-- Optional: Adds a clear button to the EditText -->
 
@@ -69,7 +65,8 @@
                     android:textDirection="ltr"
                     android:background="@drawable/edit_text_shape"
                     android:hint="enter your user name"
-                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
                     android:paddingRight="@dimen/_16sdp"
                     android:inputType="text"
                     android:textColorHint="@color/grey"
@@ -92,9 +89,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:layoutDirection="ltr"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/white"
-
 
                 >
                 <!-- Optional: Adds a clear button to the EditText -->
@@ -109,7 +103,8 @@
                     android:textDirection="ltr"
                     android:background="@drawable/edit_text_shape"
                     android:hint="enter your age"
-                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
                     android:paddingRight="@dimen/_16sdp"
                     android:inputType="number"
                     android:textColorHint="@color/grey"
@@ -131,8 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:layoutDirection="ltr"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/white"
+
                 >
                 <!-- Optional: Adds a clear button to the EditText -->
 
@@ -140,13 +134,13 @@
                     android:id="@+id/job_title"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/_7sdp"
                     android:layout_marginStart="@dimen/_16sdp"
                     android:layout_marginEnd="@dimen/_16sdp"
                     android:textDirection="ltr"
                     android:background="@drawable/edit_text_shape"
                     android:hint="enter your job title "
-                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
                     android:paddingRight="@dimen/_16sdp"
                     android:inputType="text"
                     android:textColorHint="@color/grey"
@@ -177,6 +171,7 @@
                 android:paddingRight="@dimen/_5sdp"
                 android:inputType="text"
                 android:textDirection="ltr"
+                android:paddingLeft="@dimen/_10sdp"
                 android:textSize="@dimen/_11sdp"
                 android:hint=" اختر"
                 android:layout_marginBottom="@dimen/_10sdp" />

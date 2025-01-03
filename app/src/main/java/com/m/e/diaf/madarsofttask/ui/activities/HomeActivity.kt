@@ -1,10 +1,8 @@
-package com.m.e.diaf.madarsofttask.ui
+package com.m.e.diaf.madarsofttask.ui.activities
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import com.m.e.diaf.madarsofttask.R
 import com.m.e.diaf.madarsofttask.databinding.ActivityHomeBinding
@@ -16,7 +14,6 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-//        setContentView(R.layout.activity_home)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
