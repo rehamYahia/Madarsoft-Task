@@ -11,7 +11,7 @@ interface DataUserDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertDataUser(dataUser: DataUser)
 
-    @Query("SELECT * FROM DataUserTable")
+    @Query("SELECT * FROM DataUser")
     suspend fun getAllDataUser():List<DataUser>
 
 }

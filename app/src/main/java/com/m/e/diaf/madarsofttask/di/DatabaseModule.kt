@@ -13,19 +13,24 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
+
     @Provides
     @Singleton
-    @Synchronized
-    fun provideDbInstance(application: Application) :DataUserDatabase{
-        return Room.databaseBuilder(application , DataUserDatabase::class.java , "userDB")
-            .allowMainThreadQueries()
+    fun provideDbInstance(application: Application): DataUserDatabase {
+        return Room.databaseBuilder(
+            application,
+            DataUserDatabase::class.java,
+            "datauserdatabase"
+        )
             .fallbackToDestructiveMigration()
             .build()
     }
 
     @Provides
     @Singleton
-    fun provideDao(demoDatabase: DataUserDatabase):DataUserDao{
-        return demoDatabase.getDao()
+    fun provideDao(dataUserDatabase: DataUserDatabase): DataUserDao {
+        return dataUserDatabase.getDao()
     }
 }
+
+
